@@ -1,33 +1,33 @@
 function setup() {
-  const cards = document.querySelectorAll('.card');
+  // const cards = document.querySelectorAll('.card');
 
-  // Initialize the first card as face up
-  // cards[0].textContent = 'up';
+  // // Initialize the first card as face up
+  // // cards[0].textContent = 'up';
 
-  cards.forEach((card) => {
-    if( card.textContent ==='up')
-    card.setAttribute('data-state', 'up')
-  })
+  // cards.forEach((card) => {
+  //   if( card.textContent ==='up')
+  //   card.setAttribute('data-state', 'up')
+  // })
 
-  cards.forEach((card) => {
-    card.addEventListener('click', () => {
-      // Check if the clicked card is already face up
-      if (card.textContent === 'up') {
-        return; // Do nothing if the card is already face up
-      }
+  // cards.forEach((card) => {
+  //   card.addEventListener('click', () => {
+  //     // Check if the clicked card is already face up
+  //     if (card.textContent === 'up') {
+  //       return; // Do nothing if the card is already face up
+  //     }
 
-      // Otherwise, turn over the previously face up card
-      const prevCard = document.querySelector('.card[data-state="up"]');
-      if (prevCard) {
-        prevCard.textContent = 'down';
-        prevCard.setAttribute('data-state', 'down');
-      }
+  //     // Otherwise, turn over the previously face up card
+  //     const prevCard = document.querySelector('.card[data-state="up"]');
+  //     if (prevCard) {
+  //       prevCard.textContent = 'down';
+  //       prevCard.setAttribute('data-state', 'down');
+  //     }
 
-      // Turn over the clicked card
-      card.textContent = 'up';
-      card.setAttribute('data-state', 'up');
-    });
-  });
+  //     // Turn over the clicked card
+  //     card.textContent = 'up';
+  //     card.setAttribute('data-state', 'up');
+  //   });
+  // });
 }
 
 // Example case.
